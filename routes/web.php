@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+URL::forceScheme('https');
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,3 +37,5 @@ Route::get('/board', function () {
 Route::get('/events-feed', function () {
     return view('events-feed');
 });
+
+
