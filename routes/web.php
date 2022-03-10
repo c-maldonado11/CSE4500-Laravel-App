@@ -38,7 +38,7 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
-Route::get('/db/test', function () {
+Route::get('/db-test', function () {
     try {
         \DB::connection()->getPDO();
         $db_name = \DB::connection()->getDatabaseName();
