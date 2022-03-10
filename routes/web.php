@@ -45,3 +45,8 @@ Route::get('/db-test', function () {
           echo 'None';
     }
 });
+
+Route::get('/db-migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
