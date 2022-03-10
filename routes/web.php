@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ Route::fallback(function () {
     return view('error');
 });
 
-Route::get('/todos', function () {
-    return view('todos');
-});
+Route::resource('/todos', TodoController::class);
+
 
 Route::get('/calendar', function () {
     return view('calendar');
