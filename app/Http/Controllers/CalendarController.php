@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Calendar;
+
 class CalendarController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class CalendarController extends Controller
     public function index()
     {
         $calendars = Calendar::all();
-        return view('calendars',compact('calendars'));
+        return view('calendar',compact('calendars'));
     }
 
     /**
@@ -24,7 +25,7 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        return view('calendar.create');
+        return view('calendars.create');
     }
 
     /**
@@ -59,7 +60,7 @@ class CalendarController extends Controller
     public function show($id)
     {
         $calendar= Calendar::find($id); 
-        return view('calendar.show',compact('calendars'));
+        return view('calendars.show',compact('calendar'));
     }
 
     /**
