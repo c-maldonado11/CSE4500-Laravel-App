@@ -26,7 +26,11 @@ Route::fallback(function () {
 
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/calendar', CalendarController::class);
+Route::get('/calendar', function () {
+    return view('calendar');
+});
+
+Route::resource('/event', CalendarController::class);
 
 Route::get('/board', function () {
     return view('board');

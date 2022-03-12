@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('calendar.store') }}" >
+<form method="post" action="{{ route('event.store') }}" >
     @csrf
     <x-adminlte-input name="title" label="Title" />
     <x-adminlte-input name="startTime" type="datetime-local" label="Start" />
