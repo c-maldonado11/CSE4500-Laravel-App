@@ -12,7 +12,6 @@
     <x-adminlte-input name="title" label="Title" />
     <x-adminlte-input name="startTime" type="datetime-local" label="Start" />
     <x-adminlte-input name="endTime" type="datetime-local" label="End" />
-
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
